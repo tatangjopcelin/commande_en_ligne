@@ -13,5 +13,5 @@ class Compte extends Model
         'password',
         'Role'
     ];
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 }

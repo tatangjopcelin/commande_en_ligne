@@ -35,7 +35,25 @@ class ProduitController extends Controller
         $storeProduit=Produit::create($data);
         return response(["response"=>$storeProduit],201);
 
+        $produit = Produit::find($request->input('produit_id'));
+        $image = $request->file('image');
+        $imageName = time().'_'.$image->getClientOriginalName();
+        $image->move(public_path('image'), $imageName);
+        $produit->image = $imageName;
+        $produit->save();
+        return redirect()->back()->with('success', 'Image telecharger avec succes');
+
     }
+
+    // public function uploadImage(StoreProduitRequest $request){
+    //     $produit = Produit::find($request->input('produit_id'));
+    //     $image = $request->file('image');
+    //     $imageName = time().'_'.$image->getClientOriginalName();
+    //     $image->move(public_path('image'), $imageName);
+    //     $produit->image = $imageName;
+    //     $produit->save();
+    //     return redirect()->back()->with('success', 'Image telecharger avec succes');
+    // }
 
     /**
      * Display the specified resource.
