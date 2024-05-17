@@ -15,7 +15,7 @@ class Utilisateur extends Model
         'nom',
         'numero',
         'adresse',
-        'role_utilisateur',
+        'role',
         'password',
     ];
 
