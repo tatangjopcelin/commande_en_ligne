@@ -25,7 +25,7 @@ class UpdateUtilisateurRequest extends FormRequest
             "nom"=>['nullable','string','max:255'],
             "numero"=>['nullable','integer','max:9'],
             "adresse"=>['nullable','string','max:255'],
-            "role_utilisateur"=>['nullable','in:CESSIER,ADMIN'],
+            "role"=>['nullable','in:CESSIER,ADMIN'],
             "password"=>['nullable','string','max:8'],
 
         ];

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nom', 255);
             $table->integer('numero');
             $table->string('adresse', 255);
-            $table->enum('role_utilisateur', ['CESSIERE', 'ADMIN'])->default("CESSIERE");
+            $table->enum('role', ['CESSIERE', 'ADMIN'])->default("CESSIERE");
             $table->string('password', 8);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();

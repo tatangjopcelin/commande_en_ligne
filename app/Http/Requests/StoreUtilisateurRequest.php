@@ -25,7 +25,7 @@ class StoreUtilisateurRequest extends FormRequest
             "nom"=>['required','string','max:255'],
             "numero"=>['required','integer','max:9'],
             "adresse"=>['required','string','max:255'],
-            "role_utilisateur"=>['nullable','in:CESSIER,ADMIN'],
+            "role"=>['nullable','in:CESSIER,ADMIN'],
             "password"=>['required','string','max:8'],
         ];
     }
