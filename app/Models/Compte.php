@@ -9,9 +9,12 @@ class Compte extends Model
 {
     protected $fillable=[
         'name',
-        'login',
-        'password',
-        'Role'
+        'numero',
+        'adresse',
+        'Role',
+        'email',
+        'password'
+
     ];
     use HasFactory, SoftDeletes;
 }

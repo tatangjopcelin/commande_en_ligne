@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('comptes', function (Blueprint $table) {
             $table->id();
+            $table->string('nom', 255);
+            $table->integer('numero');
+            $table->string('adresse', 255);
+            $table->enum('role', ['CESSIERE', 'ADMIN'])->default("CESSIERE");
+            $table->string('email')->unique();
+            $table->string('password');
+            $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();
         });
     }
