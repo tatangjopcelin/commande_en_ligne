@@ -22,10 +22,10 @@ class StoreUtilisateurRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "nom"=>['required','string','max:255'],
+            "name"=>['required','string','max:255'],
             "numero"=>['required','integer','max:9'],
             "adresse"=>['required','string','max:255'],
-            "role"=>['nullable','in:CESSIER,ADMIN'],
+           // "role"=>['nullable','in:CAISSIERE,ADMIN'],
             "password"=>['required','string','max:8'],
         ];
     }

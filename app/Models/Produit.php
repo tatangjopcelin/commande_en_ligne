@@ -17,7 +17,7 @@ class Produit extends Model
         'nom_produit',
         'prix_produit',
         'quantite_stock',
-        'image_produit'
+       // 'image_produit'
     ];
     public function utilisateur():belongsToMany{
         return $this->belongsToMany(Utilisateur::class, 'Commande');

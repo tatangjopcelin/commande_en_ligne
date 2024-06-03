@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nom_produit', 255);
             $table->integer('prix_produit');
             $table->integer('quantite_stock');
-            $table->string('image_produit', 255);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
 
             $table->timestamps();

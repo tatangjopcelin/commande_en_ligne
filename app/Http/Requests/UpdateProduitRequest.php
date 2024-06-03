@@ -27,7 +27,7 @@ class UpdateProduitRequest extends FormRequest
             "prix_produit"=>['nullable','integer','min:3'],
             "quantite_stock"=>['nullable','integer','min:0'],
 
-            "image_produit"=>['nullable|image|mimes:jpeg,png,jpg,gif|max:2048'],
+          //  "image_produit"=>['nullable|image|mimes:jpeg,png,jpg,gif|max:2048'],
 
         ];
     }

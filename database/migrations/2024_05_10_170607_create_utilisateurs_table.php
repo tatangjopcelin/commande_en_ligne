@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('utilisateurs', function (Blueprint $table) {
             $table->id();
-            $table->string('nom', 255);
+            $table->string('name', 255);
             $table->integer('numero');
             $table->string('adresse', 255);
-            $table->enum('role', ['CESSIERE', 'ADMIN'])->default("CESSIERE");
+           // $table->enum('role', ['CAISSIERE', 'ADMIN'])->default("CAISSIERE");
             $table->string('password', 8);
             $table->softDeletes($column = 'deleted_at', $precision = 0);
             $table->timestamps();

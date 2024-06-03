@@ -7,20 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Relations\belongsToMany;
 
-
 class Utilisateur extends Model
 {
     use HasFactory, SoftDeletes;
     protected $fillable = [
-        'nom',
+        'name',
         'numero',
         'adresse',
-        'role',
+        //'role',
         'password',
     ];
-
     public function produit():belongsToMany{
         return $this->belongsToMany(Produit::class, 'Commande');
     }
+
 
 }

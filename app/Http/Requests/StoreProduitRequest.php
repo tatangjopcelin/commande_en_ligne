@@ -27,7 +27,7 @@ class StoreProduitRequest extends FormRequest
             "prix_produit"=>['required','integer','min:3'],
             "quantite_stock"=>['required','integer','min:0'],
             //"image_produit"=>['required','image','mimes:jpeg,png,jpg,gif','max:2048'],
-            "image_produit"=>['required|image|mimes:jpeg,png,jpg,gif|max:2048'],
+           // "image_produit"=>['nullable|image|mimes:jpeg,png,jpg,gif|max:2048'],
         ];
     }
 }

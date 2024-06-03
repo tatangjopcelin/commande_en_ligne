@@ -22,10 +22,10 @@ class UpdateUtilisateurRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "nom"=>['nullable','string','max:255'],
+            "name"=>['nullable','string','max:255'],
             "numero"=>['nullable','integer','max:9'],
             "adresse"=>['nullable','string','max:255'],
-            "role"=>['nullable','in:CESSIER,ADMIN'],
+            "role"=>['nullable','in:CAISSIERE,ADMIN'],
             "password"=>['nullable','string','max:8'],
 
         ];

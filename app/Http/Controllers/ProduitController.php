@@ -93,9 +93,9 @@ class ProduitController extends Controller
     {
         $produit=Produit::find($id);
         if ($produit && $produit->delete()) {
-            return response(["response"=>true]);
+            return response(["response"=>'supprimer avec succes']);
         }
-        return response(["response"=>false]);
+        return response(["response"=>'aucun produit trouver avec cet identifiant']);
 
     }
 }

@@ -6,7 +6,7 @@ use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\UtilisateurController;
 use App\Http\Controllers\CommandeController;
-use App\Http\Controllers\CompteController;
+
 
 
 
@@ -23,11 +23,11 @@ use App\Http\Controllers\CompteController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::post('/compte/inscription', [CompteController::class, 'inscription']);
-Route::post('/compte/connexio', [CompteController::class, 'connexion']);
+// Route::post('/inscription',[CompteController::class, 'inscription']);
+// Route::post('/connexion', [CompteController::class, 'connexion']);
 
 Route::get('/', function(){
-    return 'wello word';
+    return 'wello';
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

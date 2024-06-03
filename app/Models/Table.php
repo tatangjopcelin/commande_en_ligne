@@ -13,7 +13,7 @@ class Table extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable=[
-        'nomero',
+        'numero',
         'nbr_place',
     ];
     public function commande():hasMany{
